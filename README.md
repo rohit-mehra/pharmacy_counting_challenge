@@ -13,6 +13,8 @@ Generate a list of all drugs, the total number of UNIQUE individuals who prescri
 
 2.  _Total cost per drug:_ Sum up costs for grouped data in the previous step. Null values and other noise is handled by filling in with the average.
 
+3.  _Sort descending order of total sum:_ Finally sort the grouped -> aggregated data based on total_sum per drug. This is a stable sort. Data was sorted before grouping based on drug_name, hence in case of a tie, the stability will allow to break the tie based on drug_name.
+
 Note: The total sum might not matchup exactly with true value if the values are floats, compare by having a tolerance or rounding the decimals.
 
 # Instructions
